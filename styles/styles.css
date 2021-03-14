@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Akaya Kanadaka', cursive;
+    background-color: #7868e6;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #7868e6;
+    width: 100%;
+}
+
+header{
+    padding: 20px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-size: 2em;
+    margin: 10px;
+    color: #edeef7;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.74);
+}
+
+header input{
+    font-size: 1.2em;
+    width: 400px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    resize: none;
+    border: none;
+    font-family: 'Akaya Kanadaka', cursive;
+    background-color: #e4fbff;
+}
+
+header input:focus{
+    border: none;
+    outline: 0;
+}
+
+header button{
+    font-size: 1.2em;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #e4fbff;
+    border-radius: 5px;
+    transition: all 0.5s;
+    font-family: 'Akaya Kanadaka', cursive;
+    outline: none;
+}
+
+header #vaciar{
+    width: 30%;
+}
+
+header #vaciar:hover{
+    background-color: crimson;
+}
+
+/* ---- SEPARADOR ---- */
+
+
+section{
+    width: 600px;
+    padding: 20px;
+}
+
+section ul{
+    list-style: none;
+}
+
+section ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #fff;
+    margin: 5px 0px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: #7938a1;
+    color: #fafafa;
+    font-size: 1.2em;
+    animation: agregarTarea 0.3s 1;
+}
+
+.borrarAnimacion{
+    animation: borrarAnimacion 0.3s 1;
+}
+
+section ul li:hover{
+    background-color: #440a67;
+    transform: scale(1.2);
+}
+
+section ul li .borrar{
+    font-size: 1.3em;
+    margin-left: 20px;
+    color: rgb(177, 22, 22);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+section ul li .borrar:hover{
+    background-color: rgba(126, 126, 126, 0.185);
+}
+
+section ul li a:visited,section ul li a:link{
+    text-decoration: none;
+}
+
+/* ---- EFECTOS ---- */
+
+button:hover{
+    background-color: #93329ec2;
+    color: #edeef7;
+    cursor: pointer;
+}
+
+@keyframes borrarAnimacion{
+    0%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes agregarTarea{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
